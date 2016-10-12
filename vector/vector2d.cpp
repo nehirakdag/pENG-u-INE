@@ -1,5 +1,6 @@
 #include "vector2d.h"
 
+// Constructor at dimension values 0.0 by default
 Vector2D::Vector2D(double a, double b) {
 	x = a;
 	y = b;
@@ -68,15 +69,15 @@ double Vector2D::CrossProduct(const Vector2D& v1, const Vector2D& v2) {
 	return double(v1.x * v2.y - v1.y * v2.x);
 }
 
+// Returns the magnitude of the current 2D Vector input
+double Vector2D::Magnitude(const Vector2D& v) {
+	return sqrt(v.x*v.x + v.y*v.y);
+}
+
 // Returns the unit vector of current 2D Vector input
 Vector2D Vector2D::UnitVector(const Vector2D& v) {
 	double magnitude = Magnitude(v);
 	return Vector2D(v.x / magnitude, v.y / magnitude);
-}
-
-// Returns the magnitude of the current 2D Vector input
-double Vector2D::Magnitude(const Vector2D& v) {
-	return sqrt(v.x*v.x + v.y*v.y);
 }
 
 // Returns a vector that is perpendicular to the current 2D Vector input
@@ -85,9 +86,9 @@ Vector2D Vector2D::Perpendicular(const Vector2D& v) {
 }
 
 // Returns a rotated vector of the current 2D Vector input by theta degrees
-Vector2D Vector2D::Rotate(const Vector2D& v, const double& theta) {
-	double newX = v.x*cos(theta) - v.y*sin(theta);
-	double newY = v.x*sin(theta) + v.y*cos(theta);
+Vector2D Vector2D::Rotate(const Vector2D& v, const double& degrees) {
+	double newX = v.x*cos(degrees) - v.y*sin(degrees);
+	double newY = v.x*sin(degrees) + v.y*cos(degrees);
 	return Vector2D(newX, newY);
 }
 

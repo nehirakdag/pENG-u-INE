@@ -38,17 +38,17 @@ public:
 	static double DotProduct(const Vector2D& v1, const Vector2D& v2);
 	static double CrossProduct(const Vector2D& v1, const Vector2D& v2);
 
-	// Returns the unit vector of current 2D Vector input
-	static Vector2D UnitVector(const Vector2D& v);
-
 	// Returns the magnitude of the current 2D Vector input
 	static double Magnitude(const Vector2D& v);
+
+	// Returns the unit vector of current 2D Vector input
+	static Vector2D UnitVector(const Vector2D& v);
 
 	// Returns a vector that is perpendicular to the current 2D Vector input
 	static Vector2D Perpendicular(const Vector2D& v);
 
 	// Returns a rotated vector of the current 2D Vector input by theta degrees
-	static Vector2D Rotate(const Vector2D& v, const double& theta);
+	static Vector2D Rotate(const Vector2D& v, const double& degrees);
 
 	// Set methods for coordinates and length of the vector
 	void setX(const double& newX);
@@ -59,7 +59,6 @@ public:
 	double getX();
 	double getY();
 	
-
 };
 
 #endif
