@@ -47,6 +47,9 @@ public:
 	// Returns a vector that is perpendicular to the current 2D Vector input
 	static Vector2D Perpendicular(const Vector2D& v);
 
+	// Returns a rotated vector of the current 2D Vector input by theta degrees
+	static Vector2D Rotate(const Vector2D& v, const double& theta);
+
 	// Set methods for coordinates and length of the vector
 	void setX(const double& newX);
 	void setY(const double& newY);

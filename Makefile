@@ -1,5 +1,5 @@
 objects = main.o vector2d.o vector3d.o
-headers = vector/vector2d.h vector/vector3d.h
+headers = main.h vector/vector2d.h vector/vector3d.h
 coptions = -Wall -g -ggdb
 
 all: penguine
